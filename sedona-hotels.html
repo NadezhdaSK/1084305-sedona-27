@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: гостиницы</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
-          <img src="img/logo.png" width="140" height="71" alt="Логотип Седоны">
+          <img src="img/sedona-logo.svg" width="140" height="71" alt="Логотип Седоны">
         </a>
         <ul>
           <li><a href="#">Информация</a></li>
@@ -19,13 +20,60 @@
       </nav>
     </header>
     <main>
-      <h1 hidden>Гостиницы в Седоне</h1>
+      <h1 class="visually-hidden">Гостиницы в Седоне</h1>
       <section>
-        <h2 hidden>Фильтры для гостиниц</h2>
-        <!--Здесь будет форма--><!-- чекбокс и ползунки - иконки -->
+        <h2 class="visually-hidden">Фильтры для гостиниц</h2>
+        <form action="https://echo.htmlacademy.ru" oninput="minoutput.value=mincost.value, maxoutput.value=maxcost.value">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Wi-Fi" id="Wi-Fi">
+                <label for="Wi-Fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartments" id="apartments" checked>
+                <label for="apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <div>
+              <output name="minoutput">От 0</output>
+              <output name="maxoutput">До 3000</output>
+            </div>
+            <div>
+              <input type="range" min="0" max="3000" step="50" value="0" name="mincost">
+              <input type="range" min="0" max="3000" step="50" value="2000" name="maxcost">
+            </div>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form> 
       </section>
       <section>
-        <h2 hidden>Найденные гостиницы</h2>
+        <h2 class="visually-hidden">Найденные гостиницы</h2>
           <div>
             <p>Найдено: 3</p>
             <p>Сортировка</p>
@@ -35,8 +83,8 @@
               <li><a href="#">По рейтингу</a></li>
             </ul>
             <ul>
-              <li><a href="#" class="icon-up-dir">Стрелка вверх</a></li>
-              <li><a href="#" class="icon-down-dir">Стрелка вних</a></li>
+              <li><a href="#" class="icon-up-dir" aria-label="Сортировать по возрастанию"></a></li>
+              <li><a href="#" class="icon-down-dir" aria-label="Сортировать по убыванию"></a></li>
             </ul>
         </div>
         <ul>
@@ -76,9 +124,9 @@
     <footer>
       <p>#visitsedona тел: +7(495) 666-02-66</p>
       <ul>
-        <li><a href="#" class="fb-icon">Твиттер</a></li>
-        <li><a href="#" class="tw-icon">Фейсбук</a></li>
-        <li><a href="#" class="youtube-icon">Ютуб</a></li>
+        <li><a href="#" class="fb-icon" aria-label="Твиттер"></a></li>
+        <li><a href="#" class="tw-icon" aria-label="Фейсбук"></a></li>
+        <li><a href="#" class="youtube-icon" aria-label="Ютуб"></a></li>
       </ul>
       <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmla.svg" width="115" height="41" alt="Логотип htmlAcademy"></a></p>
     </footer>

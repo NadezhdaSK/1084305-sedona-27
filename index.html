@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <nav>
         <a>
-          <img src="img/logo.png" width="140" height="71" alt="Логотип Седоны">
+          <img src="img/sedona-logo.svg" width="140" height="71" alt="Логотип Седоны">
         </a>
         <ul>
           <li><a href="#">Информация</a></li>
@@ -19,9 +20,9 @@
       </nav>
     </header>
     <main>
-      <h1 hidden>Седона. Добро пожаловать</h1>
+      <h1 class="visually-hidden">Седона. Добро пожаловать</h1>
       <section>
-        <h2 hidden>Причины приехать в г.Седона</h2>
+        <h2 class="visually-hidden">Причины приехать в г.Седона</h2>
         <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gargeous Sedona">
         <div class="welcome-background"></div> <!--Фоновая картинка-->
         <div>
@@ -76,13 +77,31 @@
         </div>
       </section>
       <section>
-        <h2 hidden>Выбрать гостиницу</h2>
+        <h2 class="visually-hidden">Выбрать гостиницу</h2>
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
         <section>
-          <h2 hidden>Поиск гостиницы</h2>
-          <!-- Здесь будет форма-->
+          <h2 class="visually-hidden">Поиск гостиницы</h2>
+          <form action="https://echo.htmlacademy.ru">
+            <div>
+              <label for="arrival-date">Дата заезда:</label>
+              <input id="arrival-date" type="date" name="arrival-date" value="2017-04-24" required>
+            </div>
+            <div>
+              <label for="departure-date">Дата выезда:</label>
+              <input id="departure-date" type="date" name="departure-date" value="2017-07-04" required>
+            </div>
+            <div>
+              <label for="adult_count"></label>
+              <input type="number" id="adult_count" name="adult_count" min="1" value="2" required>
+            </div>
+            <div>
+              <label for="child_count"></label>
+              <input type="number" id="child_count" name="child_count" min="0" value="0" required>
+            </div>
+            <button type="submit">Найти</button>
+          </form>
         </section>
         <div class="map">Карта</div>
       </section>
@@ -90,9 +109,9 @@
     <footer>
       <p>#visitsedona тел: +7(495) 666-02-66</p>
       <ul>
-        <li><a href="#" class="fb-icon">Твиттер</a></li>
-        <li><a href="#" class="tw-icon">Фейсбук</a></li>
-        <li><a href="#" class="youtube-icon">Ютуб</a></li>
+        <li><a href="#" class="fb-icon" aria-label="Твиттер"></a></li>
+        <li><a href="#" class="tw-icon" aria-label="Фейсбук"></a></li>
+        <li><a href="#" class="youtube-icon" aria-label="Ютуб"></a></li>
       </ul>
       <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmla.svg" width="115" height="41" alt="Логотип htmlAcademy"></a></p>
     </footer>
