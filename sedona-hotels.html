@@ -61,12 +61,18 @@
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
             <div>
-              <output name="minoutput">От 0</output>
-              <output name="maxoutput">До 3000</output>
+              <p>
+                <label for="min-cost">От</label>
+                <input type="text" id="min-cost" name="min-cost" placeholder="0" required>
+              </p>
+              <p>
+                <label for="max-cost">До</label>
+                <input type="text" id="max-cost" name="max-cost" placeholder="3000" required>
+              </p>
             </div>
             <div>
-              <input type="range" min="0" max="3000" step="50" value="0" name="mincost">
-              <input type="range" min="0" max="3000" step="50" value="2000" name="maxcost">
+              <button type="button">
+              <button type="button">
             </div>
           </fieldset>
           <button type="submit">Показать</button>
@@ -95,7 +101,7 @@
             <p>от 4000 Р.</p>
             <a href="#">Подробнее</a>
             <a href="#">Забронировать</a>
-            <div class="rating-stars">4 звезды</div>
+            <div class="rating-stars" aria-label="4 звезды"></div>
             <p>Рейтинг: 8,5</p>
           </li>
           <li>
@@ -105,7 +111,7 @@
             <p>от 3000 Р.</p>
             <a href="#">Подробнее</a>
             <a href="#">Забронировать</a>
-            <div class="rating-stars">3 звезды</div>
+            <div class="rating-stars" aria-label="3 звезды"></div>
             <p>Рейтинг: 8,9</p>
           </li>
           <li>
@@ -115,14 +121,14 @@
             <p>от 2000 Р.</p>
             <a href="#">Подробнее</a>
             <a href="#">Забронировать</a>
-            <div class="rating-stars">2 звезды</div>
+            <div class="rating-stars" aria-label="2 звезды"></div>
             <p>Рейтинг: 9,2</p>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <p>#visitsedona тел: +7(495) 666-02-66</p>
+      <p>#visitsedona тел: <a href="tel:+74956660266">+7(495) 666-02-66</a></p>
       <ul>
         <li><a href="#" class="fb-icon" aria-label="Твиттер"></a></li>
         <li><a href="#" class="tw-icon" aria-label="Фейсбук"></a></li>

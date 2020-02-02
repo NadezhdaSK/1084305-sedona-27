@@ -23,8 +23,9 @@
       <h1 class="visually-hidden">Седона. Добро пожаловать</h1>
       <section>
         <h2 class="visually-hidden">Причины приехать в г.Седона</h2>
-        <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gargeous Sedona">
-        <div class="welcome-background"></div> <!--Фоновая картинка-->
+        <div class="welcome-background">
+          <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gargeous Sedona">
+        </div>
         <div>
           <p>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -39,17 +40,14 @@
           <ul>
             <li>
               <h3>Жильё</h3>
-              <div class="icon-1">logo</div>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <li>
               <h3>Еда</h3>
-              <div class="icon-3">logo</div>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li>
               <h3>Сувениры</h3>
-              <div class="icon-2">logo</div>
               <p>Не только китайского, но и местного производства!</p>
             </li>
           </ul>
@@ -82,23 +80,28 @@
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
         <section>
-          <h2 class="visually-hidden">Поиск гостиницы</h2>
           <form action="https://echo.htmlacademy.ru">
             <div>
               <label for="arrival-date">Дата заезда:</label>
-              <input id="arrival-date" type="date" name="arrival-date" value="2017-04-24" required>
+              <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017" required>
+              <button type="button"></button>
             </div>
             <div>
               <label for="departure-date">Дата выезда:</label>
-              <input id="departure-date" type="date" name="departure-date" value="2017-07-04" required>
+              <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017" required>
+              <button type="button"></button>
             </div>
             <div>
-              <label for="adult_count"></label>
-              <input type="number" id="adult_count" name="adult_count" min="1" value="2" required>
+              <label for="adult_count">Взрослые:</label>
+              <button type="button"></button>
+              <input type="text" id="adult_count" name="adult_count" min="1" value="2" required>
+              <button type="button"></button>
             </div>
             <div>
-              <label for="child_count"></label>
-              <input type="number" id="child_count" name="child_count" min="0" value="0" required>
+              <label for="child_count">Дети:</label>
+              <button type="button"></button>
+              <input type="text" id="child_count" name="child_count" min="0" value="0" required>
+              <button type="button"></button>
             </div>
             <button type="submit">Найти</button>
           </form>
@@ -107,7 +110,7 @@
       </section>
     </main>
     <footer>
-      <p>#visitsedona тел: +7(495) 666-02-66</p>
+      <p>#visitsedona тел: <a href="tel:+74956660266">+7(495) 666-02-66</a></p>
       <ul>
         <li><a href="#" class="fb-icon" aria-label="Твиттер"></a></li>
         <li><a href="#" class="tw-icon" aria-label="Фейсбук"></a></li>
