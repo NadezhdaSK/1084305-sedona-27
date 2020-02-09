@@ -279,6 +279,8 @@ a {
 .infrastructure ul,
 .type ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .filter-form .show {
   background-color: rgba(0, 0, 0, 0);
