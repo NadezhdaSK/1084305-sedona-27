@@ -43,10 +43,11 @@ a {
   width: 1200px;
   font-weight: 700;
   position: relative;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 .site-navigation {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -54,11 +55,14 @@ a {
   height: 56px;
 }
 .site-navigation li {
-  width: 239px;
-  text-align: center;
+  width: 240px;
 }
 .site-navigation li:nth-child(2) {
   margin-right: auto;
+}
+.site-navigation li:nth-child(3),
+.site-navigation li:last-child {
+  text-align: right;
 }
 .logo-sedona {
   position: absolute;
@@ -83,10 +87,11 @@ a {
 
 .welcome-background {
   width: 1200px;
-  height: 773px;
+  height: 510px;
   text-align: center;
   background-color: #B0E0E6;
   background-image: url("../img/background-photo.jpg");
+  background-position: 0% 30%;
 }
 .box-title {
   text-align: center;
@@ -96,9 +101,13 @@ a {
 .box-title .title {
   font-size: 21px;
   font-weight: 700;
+  width: 440px;
+  margin: 0 auto;
 }
 .box-title .subtitle {
   color: #333333;
+  width: 490px;
+  margin: 0 auto;
   margin-top: 35px;
 }
 .features {
@@ -148,14 +157,18 @@ a {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  width: 300px;
 }
 
 .hotel-search .subtitle {
   line-height: 24px;
   text-align: center;
   color: #333333;
+  margin: 0 auto;
   margin-bottom: 50px;
+  width: 435px;
 }
 .hotel-search .search-button {
   background-color: #766357;
@@ -367,9 +380,12 @@ a {
   width: 110px;
   margin-left: auto;
 }
+.hotel-list .type {
+  width: 110px;
+  margin-right: 6px;
+}
 .hotel-list .cost {
-  margin-left: 39px;
-  margin-right: 50px;
+  width: 142px;
 }
 .rating-stars {
   /*временно*/
