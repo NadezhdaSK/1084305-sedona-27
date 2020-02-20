@@ -458,7 +458,7 @@ img {
   border: none;
 }
 .filter-form .filter-type {
-  margin-left: 115px;
+  margin-left: 118px;
   margin-right: auto;
 }
 .filter-form .cost {
@@ -468,16 +468,15 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 .filter ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.filter-infrastructure li,
-.filter-type li {
-  padding-left: 42px;
+.filter li {
+  padding-left: 40px;
   margin-bottom: 25px;
 }
 .filter li:last-child{
@@ -518,7 +517,7 @@ img {
   height: 36px;
   border: 2px solid white;
   border-radius: 2px;
-  margin-top: -12px;
+  margin-top: -13px;
   margin-bottom: 20px;
 }
 .price-controls::after {
