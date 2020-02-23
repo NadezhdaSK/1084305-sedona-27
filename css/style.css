@@ -140,13 +140,11 @@ img {
 }
 .box-title .subtitle {
   color: #333333;
-  width: 500px;
+  width: 550px;
   margin: 0 auto;
   margin-top: 27px;
 }
-.features {
-  margin-bottom: 50px;
-}
+
 .feature {
   display:flex;
   flex-wrap: wrap;
@@ -192,6 +190,7 @@ img {
 .feature-grey {
   background-color: #eeeeee;
   padding: 47px 69px 60px 69px;
+  z-index: 100;
 }
 .feature-white li {
   position: relative;
@@ -271,6 +270,20 @@ img {
   background-color:#503e33;
   color: rgba(255, 255, 255, 0.3);
 }
+.white-block {
+  padding-top: 50px;
+  position: relative;
+  z-index: 100;
+  background-color: white;
+}
+@-webkit-keyframes show {
+  0% {-webkit-transform: translateY(-100%);transform: translateY(-100%);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+@keyframes show {
+  0% {-webkit-transform: translateY(-100%);transform: translateY(-100%);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
 .search-main {
   position: relative;
 }
@@ -284,6 +297,16 @@ img {
   padding: 55px;
   background-color: #fff;
   z-index: 10;
+}
+.modal-show {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+.modal-close {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 .arrival,
 .departure {
