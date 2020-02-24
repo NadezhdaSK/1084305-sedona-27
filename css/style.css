@@ -613,7 +613,6 @@ img {
   background: #ffffff;
 }
 .range-controls .range-toggle {
-  display: inline-block;
   position: absolute;
   top: -9px;
   width: 20px;
