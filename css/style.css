@@ -2,15 +2,12 @@
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -26,12 +23,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-
   background-color: #f2f2f2;
 }
 a {
@@ -122,7 +117,7 @@ img {
   width: 1200px;
   height: 60px;
   left: 0px;
-  bottom: -3px;
+  bottom: -4px;
 }
 .welcome-background img {
   margin-top: 76px;
@@ -135,7 +130,7 @@ img {
 .box-title .title {
   font-size: 21px;
   font-weight: 700;
-  width: 440px;
+  width: 500px;
   margin: 0 auto;
 }
 .box-title .subtitle {
@@ -144,7 +139,6 @@ img {
   margin: 0 auto;
   margin-top: 27px;
 }
-
 .feature {
   display:flex;
   flex-wrap: wrap;
@@ -222,7 +216,6 @@ img {
   background-image: url(../img/icon-2.svg);
   margin-left: -32px;
 }
-
 
 /* Поиск гостиницы */
 
@@ -475,7 +468,6 @@ img {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
-
 .map {
   width: 1200px;
   height: 593px;
@@ -487,10 +479,10 @@ img {
 }
 
 /* Фильтры */
+
 .filters {
   width: 1200px;
 }
-
 .filter-form {
   display: flex;
   flex-wrap: wrap;
@@ -621,14 +613,26 @@ img {
   background: #ffffff;
 }
 .range-controls .range-toggle {
+  display: inline-block;
   position: absolute;
   top: -9px;
   width: 20px;
   height: 20px;
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
+  background: #fff;
+  border-radius: 100%;
+  border: 0;
   cursor: pointer;
+}
+.range-controls .range-toggle:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #ababab;
 }
 .range-controls .range-toggle.min {
   left: 0;
@@ -636,7 +640,8 @@ img {
 .range-controls .range-toggle.max {
   left: 80%;
 }
-.range-controls .range-toggle:hover {
+.range-controls .range-toggle:hover,
+.range-controls .range-toggle:focus {
   box-shadow: 0 0 0 1px #ffffff;
 }
 .filter-form .show {
